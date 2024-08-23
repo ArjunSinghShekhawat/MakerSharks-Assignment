@@ -60,3 +60,25 @@
                         ├── service
                         └── repository
 ```
+
+
+## How to Run the Project
+
+To run this project, follow these steps:
+
+### Prerequisites
+
+Ensure that you have the following installed:
+
+- [Java 17+](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
+- [Maven](https://maven.apache.org/download.cgi)
+- [MySQL](https://dev.mysql.com/downloads/) 
+
+### Steps to Run
+
+1. **Clone the Repository**  
+   Clone this project to your local machine:
+   ```bash
+   git clone https://github.com/your-repo-url/project-name.git
+   cd project-name
+
