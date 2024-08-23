@@ -106,3 +106,58 @@ mvn spring-boot:run
 ````
 http://localhost:8080
 
+## API Endpoints
+
+# This project provides the following REST API endpoints:
+
+### 1. Get All Suppliers
+
+- **Endpoint:** `GET /user/get`
+- **URL:** `http://localhost:8080/user/get`
+- **Description:** Retrieves a list of all suppliers.
+
+### 2. Get Supplier by ID
+
+- **Endpoint:** `GET /user/get/{id}`
+- **URL Example:** `http://localhost:8080/user/get/1`
+- **Description:** Retrieves the supplier with the specified ID.
+
+### 3. Get Supplier by Query Parameters
+
+- **Endpoint:** `GET /user/api/supplier`
+- **URL Example:** `http://localhost:8080/user/api/supplier?location=london&natureOfBusiness=LARGE_SCALE&manufacturingProcesses=CASTING&pageNumber=2&pageSize=2&sortBy=supplierId&sortDir=asc`
+
+- **Description:** Retrieves suppliers based on query parameters like location, nature of business, manufacturing processes, pagination, and sorting.
+
+- **Query Parameters:**
+- `location`: Filter by supplier location (e.g., `london`).
+- `natureOfBusiness`: Filter by the nature of the business (e.g., `LARGE_SCALE`).
+- `manufacturingProcesses`: Filter by manufacturing processes (e.g., `CASTING`).
+- `pageNumber`: Pagination - specify the page number (e.g., `2`).
+- `pageSize`: Pagination - specify the number of records per page (e.g., `2`).
+- `sortBy`: Field to sort the results by (e.g., `supplierId`).
+- `sortDir`: Sort direction - `asc` for ascending, `desc` for descending (e.g., `asc`).
+
+### 4. Create a Supplier
+
+- **Endpoint:** `POST /user/create/supplier`
+- **URL:** `http://localhost:8080/user/create/supplier`
+- **Description:** Creates a new supplier with the provided details.
+
+### 5. Update Supplier by ID
+
+- **Endpoint:** `PUT /user/update/supplier/{id}`
+- **URL Example:** `http://localhost:8080/user/update/supplier/1`
+- **Description:** Updates the details of the supplier with the specified ID.
+
+### 6. Delete Supplier by ID
+
+- **Endpoint:** `DELETE /user/delete/supplier/{id}`
+- **URL Example:** `http://localhost:8080/user/delete/supplier/12`
+- **Description:** Deletes the supplier with the specified ID.
+
+### Notes:
+- Make sure the application is running on `localhost:8080` before testing the endpoints.
+- You can test the APIs using tools like Postman, cURL, or directly from your web browser for GET requests.
+
+
