@@ -1,4 +1,4 @@
-# MakerSharks Assignment
+z# MakerSharks Assignment
  
 ## Database Information Supplier Table
 
@@ -290,7 +290,7 @@ Below are sample responses for each of the API endpoints:
 - **URL Example:** `http://localhost:8080/user/update/supplier/1`
 - **Sample Response:**
   ```json
- {
+  {
     "supplierId": 1,
     "companyName": "Mam1 Solutions",
     "website": "http://www.mam1.com",
