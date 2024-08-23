@@ -1,5 +1,4 @@
-# Treading-Platform
- MakerSharks Assignment
+#MakerSharks Assignment
  
 ## Supplier Table
 
