@@ -298,8 +298,7 @@ Below are sample responses for each of the API endpoints:
     "natureOfBusiness": "MEDIUM_SCALE",
     "manufacturingProcesses": "THREE_D_PRINTING"
 }
-  ```
-
+  
 ### 6. Delete Supplier by ID
 
 - **Endpoint:** `DELETE /user/delete/supplier/{id}`
@@ -310,7 +309,7 @@ Below are sample responses for each of the API endpoints:
       "message": "Supplier Successfully Deleted",
       "status": true
   }
-  ```
+ 
 
 
 
