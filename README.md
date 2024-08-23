@@ -79,6 +79,29 @@ Ensure that you have the following installed:
 1. **Clone the Repository**  
    Clone this project to your local machine:
    ```bash
-   git clone https://github.com/your-repo-url/project-name.git
+   https://github.com/ArjunSinghShekhawat/MakerSharks-Assignment.git
    cd project-name
+### Configure the Database
 
+# properties
+Update the application.properties file in the src/main/resources directory with your database configuration:
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/your-database-name
+spring.datasource.username=your-username
+spring.datasource.password=your-password
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### Build the Project
+```
+mvn clean install
+```
+
+### Run the Project
+```
+mvn spring-boot:run
+```
+### Access the Application
+````
+http://localhost:8080
+```
