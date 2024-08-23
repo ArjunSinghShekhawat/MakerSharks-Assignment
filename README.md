@@ -290,10 +290,14 @@ Below are sample responses for each of the API endpoints:
 - **URL Example:** `http://localhost:8080/user/update/supplier/1`
 - **Sample Response:**
   ```json
-  {
-      "message": "Supplier Successfully Updated",
-      "status": true
-  }
+ {
+    "supplierId": 1,
+    "companyName": "Mam1 Solutions",
+    "website": "http://www.mam1.com",
+    "location": "jaipur",
+    "natureOfBusiness": "MEDIUM_SCALE",
+    "manufacturingProcesses": "THREE_D_PRINTING"
+}
   ```
 
 ### 6. Delete Supplier by ID
