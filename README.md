@@ -1,6 +1,6 @@
 # MakerSharks Assignment
  
-## Supplier Table
+## Database Information Supplier Table
 
 | Field                   | Type    |
 |-------------------------|---------|
