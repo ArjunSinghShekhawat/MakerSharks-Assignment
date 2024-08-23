@@ -161,3 +161,152 @@ http://localhost:8080
 - You can test the APIs using tools like Postman, cURL, or directly from your web browser for GET requests.
 
 
+## Example API Responses
+
+Below are sample responses for each of the API endpoints:
+
+### 1. Get All Suppliers
+
+- **Endpoint:** `GET /user/get`
+- **URL:** `http://localhost:8080/user/get`
+- **Sample Response:**
+    ```json
+    [
+        {
+            "supplierId": 1,
+            "companyName": "TechPrint Solutions",
+            "website": "http://www.techprintsolutions.com",
+            "location": "jaipur",
+            "natureOfBusiness": "SMALL_SCALE",
+            "manufacturingProcesses": "CASTING"
+        },
+        {
+            "supplierId": 2,
+            "companyName": "3D Innovations",
+            "website": "http://www.3dinnovations.com",
+            "location": "jaipur",
+            "natureOfBusiness": "LARGE_SCALE",
+            "manufacturingProcesses": "THREE_D_PRINTING"
+        },
+        {
+            "supplierId": 3,
+            "companyName": "TechPrint Solutions",
+            "website": "techprintsolutions.com",
+            "location": "siker",
+            "natureOfBusiness": "MEDIUM_SCALE",
+            "manufacturingProcesses": "COATING"
+        },
+        {
+            "supplierId": 4,
+            "companyName": "EcoManufacturing",
+            "website": "ecomanufacturing.com",
+            "location": "Austin",
+            "natureOfBusiness": "LARGE_SCALE",
+            "manufacturingProcesses": "CASTING"
+        },
+        {
+            "supplierId": 5,
+            "companyName": "UrbanMould",
+            "website": "urbanmould.com",
+            "location": "Delhi",
+            "natureOfBusiness": "MEDIUM_SCALE",
+            "manufacturingProcesses": "MOULDING"
+        }
+    ]
+    ```
+
+### 2. Get Supplier by ID
+
+- **Endpoint:** `GET /user/get/{id}`
+- **URL Example:** `http://localhost:8080/user/get/1`
+- **Sample Response:**
+    ```json
+    {
+        "supplierId": 1,
+        "companyName": "TechPrint Solutions",
+        "website": "http://www.techprintsolutions.com",
+        "location": "jaipur",
+        "natureOfBusiness": "SMALL_SCALE",
+        "manufacturingProcesses": "CASTING"
+    }
+    ```
+
+### 3. Get Supplier by Query Parameters with Pagination
+
+- **Endpoint:** `GET /user/api/supplier`
+- **URL Example:** http://localhost:8080/user/api/supplier?location=london&natureOfBusiness=LARGE_SCALE&manufacturingProcesses=CASTING&pageNumber=2&pageSize=2&sortBy=supplierId&sortDir=asc
+
+  - **Sample Response:**
+  ```json
+  {
+      "content": [
+          {
+              "supplierId": 94,
+              "companyName": "Rahul Ltd.",
+              "website": "Rahul.com",
+              "location": "London",
+              "natureOfBusiness": "LARGE_SCALE",
+              "manufacturingProcesses": "CASTING"
+          },
+          {
+              "supplierId": 95,
+              "companyName": "Ram Ltd.",
+              "website": "Ram.com",
+              "location": "London",
+              "natureOfBusiness": "LARGE_SCALE",
+              "manufacturingProcesses": "CASTING"
+          }
+      ],
+      "pageNumber": 2,
+      "pageSize": 2,
+      "totalElements": 8,
+      "totalPages": 4,
+      "lastPage": false
+  }
+  ```
+
+### 4. Create a Supplier
+
+- **Endpoint:** `POST /user/create/supplier`
+- **URL:** `http://localhost:8080/user/create/supplier`
+- **Sample Response:**
+  ```json
+  {
+      "supplierDto": {
+          "supplierId": null,
+          "companyName": "Mam Solutions",
+          "website": "http://www.mam.com",
+          "location": "jaipur",
+          "natureOfBusiness": "MEDIUM_SCALE",
+          "manufacturingProcesses": "THREE_D_PRINTING"
+      },
+      "message": "Supplier Successfully Created!"
+  }
+  ```
+
+### 5. Update Supplier by ID
+
+- **Endpoint:** `PUT /user/update/supplier/{id}`
+- **URL Example:** `http://localhost:8080/user/update/supplier/1`
+- **Sample Response:**
+  ```json
+  {
+      "message": "Supplier Successfully Updated",
+      "status": true
+  }
+  ```
+
+### 6. Delete Supplier by ID
+
+- **Endpoint:** `DELETE /user/delete/supplier/{id}`
+- **URL Example:** `http://localhost:8080/user/delete/supplier/12`
+- **Sample Response:**
+  ```json
+  {
+      "message": "Supplier Successfully Deleted",
+      "status": true
+  }
+  ```
+
+
+
