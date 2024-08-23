@@ -80,6 +80,7 @@ Ensure that you have the following installed:
    Clone this project to your local machine:
    ```bash
    https://github.com/ArjunSinghShekhawat/MakerSharks-Assignment.git
+   
    cd project-name
 ### Configure the Database
 
@@ -104,4 +105,4 @@ mvn spring-boot:run
 ### Access the Application
 ````
 http://localhost:8080
-```
+
